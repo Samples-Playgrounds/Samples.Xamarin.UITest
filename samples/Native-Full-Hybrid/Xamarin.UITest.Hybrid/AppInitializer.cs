@@ -9,7 +9,10 @@ namespace Xamarin.UITest.Hybrid
 	public class AppInitializer
 	{
 		private static string  app_file_android_apk = 
-			"/Users/moljac/Projects/Samples/Samples.Xamarin.UITest/samples/Native-Full-Hybrid/app-files-hybrid/android/Untappd - Discover Beer v2.3.4.apk"
+			"/Users/moljac/Projects/Samples/Samples.Xamarin.UITest/samples/Native-Full-Hybrid/app-files-hybrid/Untappd - Discover Beer v2.3.4.apk"
+			;
+		private static string  app_file_ios_ipa = 
+			""
 			;
 
 		public static IApp StartApp (Platform platform)
@@ -39,9 +42,7 @@ namespace Xamarin.UITest.Hybrid
 					ConfigureApp
 						.iOS
 						.Debug()
-						// TODO: Update this path to point to your iOS app and uncomment the
-						// code if the app is not included in the solution.
-						//.AppBundle ("../../../iOS/bin/iPhoneSimulator/Debug/XamarinForms.iOS.app")
+						.AppBundle (app_file_ios_ipa)
 						.StartApp ()
 						;
 
